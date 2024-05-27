@@ -34,3 +34,10 @@ input, button, textarea, select {
     font: inherit; 
 }
 
+/* general properties */
+
+.section {
+    text-align:center;
+    font-size: 3em;
+    font-family: arial;
+  }
