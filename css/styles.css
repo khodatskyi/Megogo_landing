@@ -109,18 +109,20 @@ p {
 .section-2 {
   padding: 100px 30px 0 30px;
   height: 100vh;
-  background-color: yellow;
-  background-image: url(/assets/Iphone_John_Wick_2.png);
+  background-image: linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgba(0, 0, 0) 100%
+    ),
+    url(/assets/Iphone_John_Wick_2.png);
   background-position: center;
   background-size: cover;
-  box-shadow: rgba(0, 0, 0, 0.95) 0px -80px 36px -10px inset;
 }
 
 .section-2__text {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  
 }
 
 .section-2 p {
