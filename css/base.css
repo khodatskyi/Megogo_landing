@@ -1,0 +1,95 @@
+/* It contains all the common styles */
+/* fonts */
+
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url("/assets/fonts/SFUIDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url("/assets/fonts/SFUIDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url("/assets/fonts/SFUIDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* general properties */
+
+:root {
+  --text-color: #ffffff;
+  --secondary-color: #23c3b2;
+  --background-color: #000;
+}
+
+.section {
+  text-align: center;
+  font-size: 3em;
+  text-align: left;
+  font-family: "SFUIDisplay";
+  color: var(--text-color);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42.96px;
+  text-align: left;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  line-height: 28.64px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.87px;
+  text-align: left;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.32px;
+  letter-spacing: 0.8333333134651184px;
+  text-align: left;
+}
+
+a {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13.13px;
+  letter-spacing: 1.2999999523162842px;
+  text-align: left;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  line-height: 22.4px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
