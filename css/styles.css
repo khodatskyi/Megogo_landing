@@ -16,6 +16,50 @@
   padding: 0 0 0 30px;
 }
 
+#menuButton {
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 999;
+  opacity: 0.9;
+}
+
+.side-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--text-color);
+  display: block;
+  transition: 0.3s;
+}
+
+.side-menu a:hover {
+  color: var(--secondary-color);
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  font-size: 36px;
+}
+
 .section-1__text {
   margin: 0 auto;
   display: flex;
@@ -32,6 +76,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.section-1__footer .arrow {
+  cursor: pointer;
+  animation: bounce 1s infinite;
+}
+
+.section-1__footer .arrow:hover {
+  filter: brightness(70%);
 }
 
 /* section-2 */
@@ -86,6 +139,10 @@
   margin-top: 10px;
 }
 
+.section-3 a:hover {
+  filter: brightness(80%);
+}
+
 button {
   background-color: var(--secondary-color);
   width: 200px;
@@ -100,6 +157,10 @@ button {
   line-height: 13.13px;
   letter-spacing: 1.2999999523162842px;
   text-align: center;
+}
+
+button:hover {
+  filter: brightness(80%);
 }
 
 /* section-4 */
@@ -257,5 +318,19 @@ button {
         rgba(0, 0, 0) 100%
       ),
       url(/assets/TV_Dune.png);
+  }
+}
+
+/* animation */
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
   }
 }
