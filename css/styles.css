@@ -196,3 +196,93 @@ button {
   letter-spacing: 1.2999999523162842px;
   text-align: center;
 }
+
+/* section-4 */
+
+.section-4 {
+  position: relative;
+  padding: 0 20px 10px 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-color: var(--background-color);
+}
+
+.section-4::before {
+  z-index: 999;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 70%,
+    var(--background-color) 98%
+  );
+}
+
+.section-4__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 0 50px 0;
+}
+
+.section-4__text p {
+  opacity: 0.8;
+}
+
+.section-4__logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.section-4__logo-1,
+.section-4__logo-2,
+.section-4__logo-3,
+.section-4__logo-4 {
+  position: relative;
+}
+
+.section-4__logo-1,
+.section-4__logo-2 {
+  grid-row: 1;
+}
+
+.section-4__logo-3,
+.section-4__logo-4 {
+  grid-row: 2;
+}
+
+.section-4__logo-1 img,
+.section-4__logo-2 img,
+.section-4__logo-3 img,
+.section-4__logo-4 img {
+  border-radius: 5px;
+}
+
+.section-4__logo-1::before,
+.section-4__logo-2::before,
+.section-4__logo-3::before,
+.section-4__logo-4::before {
+  content: "-20%";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--background-color);
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  width: 50px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: var(--text-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+}
