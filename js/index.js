@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle subscription button click for all elements with class '.subscription'
   const subscriptionButtons = document.querySelectorAll(".subscription");
   subscriptionButtons.forEach(function (subscriptionButton) {
-    subscriptionButton.addEventListener("click", function () {
-      window.location.href = "https://megogo.net/payment";
-    });
+    subscriptionButton.addEventListener("click", handleSubscriptionClick);
   });
+  // Function to handle subscription button clicks
+  function handleSubscriptionClick() {
+    window.location.href = "https://megogo.net/payment";
+  }
 
   // Handle detail link click
   const detailLink = document.querySelector(".detail");
@@ -30,30 +32,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isOpen = false;
 
-  function closeMenu() {
-    isOpen = false;
-    sideMenu.style.width = "0";
+  function toggleMenu() {
+    isOpen = !isOpen;
+    sideMenu.style.width = isOpen ? "200px" : "0";
   }
 
   // Event listener for clicking the menu button
   menuButton.addEventListener("click", function () {
-    isOpen = !isOpen;
-    sideMenu.style.width = isOpen ? "200px" : "0";
+    toggleMenu();
   });
 
-  // Event listener for clicking anywhere on the document
+  // Close the menu if click is outside the menu and menu button
   document.addEventListener("click", function (event) {
-    // Check if the click event occurred outside the side menu and menu button
     if (!sideMenu.contains(event.target) && event.target !== menuButton) {
-      closeMenu();
+      isOpen = false;
+      sideMenu.style.width = "0";
     }
   });
 
   // Function to set the correct value for the '--vh' CSS variable
   function setViewportHeight() {
-    // Calculate 1% of the viewport height
     let vh = window.innerHeight * 0.01;
-    // Set the '--vh' variable to the calculated value
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
 
