@@ -1,6 +1,6 @@
 # Megogo Landing Page Clone
 
-This project is a clone of the landing page of the Megogo website. It utilizes HTML, CSS, JavaScript, and the FullPage.js library to create an interactive scrolling web page.
+Welcome to the Megogo Landing Page Clone project! This project aims to replicate the design and functionality of the Megogo landing page, optimized primarily for mobile devices.
 
 ---
 
