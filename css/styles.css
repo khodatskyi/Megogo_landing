@@ -2,7 +2,6 @@
 /* section-1 */
 
 .section-1 {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -98,7 +97,6 @@
 
 .section-2 {
   padding: 40px 30px 0 30px;
-  /* height: 100vh; */
   background-image: linear-gradient(
       to bottom,
       transparent 40%,
@@ -127,7 +125,6 @@
   justify-content: space-between;
   border: 8px solid var(--secondary-color);
   padding: 20px 30px 20px 30px;
-  /* height: 100vh; */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.83) 100%),
     url(/assets/grid_logo.jpg);
@@ -175,7 +172,6 @@ button:hover {
 .section-4 {
   position: relative;
   padding: 0 20px 10px 20px;
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -264,7 +260,6 @@ button:hover {
 
 .section-5 {
   padding: 100px 30px 10px 30px;
-  /* height: 100vh; */
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
