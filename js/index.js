@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle detail link click
   const detailLink = document.querySelector(".detail");
   detailLink.addEventListener("click", function () {
-    // Redirect to details page
     window.location.href = "https://megogo.net/ua/kino_i_tv";
   });
 
@@ -29,12 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.getElementById("menuButton");
   const sideMenu = document.getElementById("sideMenu");
 
-  // Variable to track if the side menu is open or closed
   let isOpen = false;
 
-
   function closeMenu() {
-    // Function to close the side menu
     isOpen = false;
     sideMenu.style.width = "0";
   }
@@ -42,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for clicking the menu button
   menuButton.addEventListener("click", function () {
     isOpen = !isOpen;
-    // Open or close the menu based on the value of isOpen
     sideMenu.style.width = isOpen ? "200px" : "0";
   });
 
@@ -50,7 +45,21 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function (event) {
     // Check if the click event occurred outside the side menu and menu button
     if (!sideMenu.contains(event.target) && event.target !== menuButton) {
-      closeMenu(); // Close the menu if the click was outside of it
+      closeMenu();
     }
   });
+
+  // Function to set the correct value for the '--vh' CSS variable
+  function setViewportHeight() {
+    // Calculate 1% of the viewport height
+    let vh = window.innerHeight * 0.01;
+    // Set the '--vh' variable to the calculated value
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+
+  // Set the correct value when the page loads
+  setViewportHeight();
+
+  // Update the value when the window is resized
+  window.addEventListener("resize", setViewportHeight);
 });

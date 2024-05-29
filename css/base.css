@@ -28,9 +28,11 @@
   --text-color: #ffffff;
   --secondary-color: #23c3b2;
   --background-color: #000;
+  --vh: 100%;
 }
 
 .section {
+  height: calc(var(--vh, 1vh) * 100);
   text-align: center;
   font-size: 3em;
   text-align: left;
@@ -92,4 +94,8 @@ p {
   line-height: 22.4px;
   letter-spacing: 0.5px;
   text-align: left;
+}
+
+.section-1, .section-2, .section-3, .section-4, .section-5 {
+  height: calc(var(--vh, 1vh) * 100);
 }
